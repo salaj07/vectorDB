@@ -30,3 +30,9 @@ desktop.ini
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Local Video / Demo Scripts (Private)
+DEMO_SCRIPT.md
+demo_script.md
+demo_script*.md
+*.private.md
