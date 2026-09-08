@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cache_5000",
+    "query": "express js framework",
+    "llm_response": "Based on the retrieved context, the Express.js framework simplifies:\n\n* **HTTP routing**\n* **Middleware handling**\n* **REST API development** in Node.js.",
+    "timestamp": "2026-09-08T14:39:27.523777",
+    "context_ids": [
+      "text_0",
+      "text_480",
+      "text_4680"
+    ]
+  },
+  {
+    "id": "cache_5001",
+    "query": "what is kubernetes",
+    "llm_response": "Based on the retrieved context, there is no information regarding Kubernetes (the context only discusses vector database indexing). \n\nHowever, using domain knowledge:\n\n**Kubernetes** (often abbreviated as K8s) is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery.",
+    "timestamp": "2026-09-08T14:40:15.679433",
+    "context_ids": [
+      "text_1152",
+      "text_4652",
+      "text_2652"
+    ]
+  },
+  {
+    "id": "cache_5002",
+    "query": "machine learning neural networks",
+    "llm_response": "Based on the retrieved context and machine learning principles, neural networks are a class of models used to solve complex pattern recognition tasks. \n\nSpecifically, **convolutional neural networks (CNNs)** are a highly effective type of neural network used in practical machine learning applications. They work by extracting **spatial feature maps** from input data, making them exceptionally well-suited for **image classification tasks**.",
+    "timestamp": "2026-09-08T14:43:11.279618",
+    "context_ids": [
+      "text_1146",
+      "text_2946",
+      "text_4146"
+    ]
+  },
+  {
+    "id": "cache_5003",
+    "query": "photocopy",
+    "llm_response": "Based on the retrieved context from the database, there is no information related to \"photocopy\" (the context only contains specifications regarding the Next.js framework and React applications). \n\nUsing general knowledge, a **photocopy** is a physical duplicate of a document or image produced by a photocopier. This process typically uses xerography, a dry electrostatic printing technique that uses light, static electricity, and toner to quickly copy text or images onto paper.",
+    "timestamp": "2026-09-08T14:57:45.977976",
+    "context_ids": [
+      "text_45",
+      "text_4125",
+      "text_3525"
+    ]
+  }
+]
