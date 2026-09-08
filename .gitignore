@@ -1,92 +1,32 @@
-# ==============================================================================
-# VectorForge — .gitignore
-# ==============================================================================
-
-# --- Python Bytecode & Cache ---
+# Byte-compiled / optimized / cache files
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyd
-*.so
-.Python
 
-# --- Virtual Environments ---
+# Virtual environments
 venv/
 env/
 .venv/
 ENV/
-env.bak/
-venv.bak/
 
-# --- Environment & Secret Variables ---
+# Environment Variables & Secrets
 .env
 *.env
-.env.*
 !.env.example
 
-# --- IDEs & Editors ---
-.vscode/
+# IDE & Editor caches
 .idea/
+.vscode/
 *.swp
 *.swo
-*~
-*.sublime-project
-*.sublime-workspace
-.project
-.pydevproject
-.settings/
 
-# --- Operating System Files ---
+# Operating System files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 desktop.ini
-$RECYCLE.BIN/
 
-# --- Testing, Coverage & Profiling ---
+# Testing & Coverage caches
 .pytest_cache/
 .coverage
-.coverage.*
 htmlcov/
-.tox/
-.nox/
-.hypothesis/
-prof/
-*.prof
-
-# --- Logs & Temporary Files ---
-*.log
-logs/
-tmp/
-temp/
-scratch/
-*.tmp
-*.temp
-*.bak
-
-# --- Build, Packaging & Distribution ---
-dist/
-build/
-*.egg-info/
-*.egg
-eggs/
-.eggs/
-wheels/
-*.spec
-
-# --- Jupyter Notebooks ---
-.ipynb_checkpoints/
-*-checkpoint.ipynb
-
-# --- Generated Large Data & Benchmarks ---
-data/*.npy
-data/*.npz
-data/*.json
-data_text/*.npy
-data_text/*.npz
-benchmarks/*.json
-benchmarks/*.csv
