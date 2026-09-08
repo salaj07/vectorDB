@@ -1,42 +1,92 @@
-# Byte-compiled / optimized / DLL files
+# ==============================================================================
+# VectorForge — .gitignore
+# ==============================================================================
+
+# --- Python Bytecode & Cache ---
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyd
+*.so
+.Python
 
-# Virtual environments
+# --- Virtual Environments ---
 venv/
 env/
 .venv/
+ENV/
+env.bak/
+venv.bak/
 
-# IDE
-.idea/
+# --- Environment & Secret Variables ---
+.env
+*.env
+.env.*
+!.env.example
+
+# --- IDEs & Editors ---
 .vscode/
+.idea/
 *.swp
 *.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
 
-# Generated data
-data/*.npy
-data/*.npz
-data/metadata.json
-data/ground_truth.npy
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
 
-# Benchmark output
-benchmarks/results.json
+# --- Testing, Coverage & Profiling ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+prof/
+*.prof
 
-# Distribution
+# --- Logs & Temporary Files ---
+*.log
+logs/
+tmp/
+temp/
+scratch/
+*.tmp
+*.temp
+*.bak
+
+# --- Build, Packaging & Distribution ---
 dist/
 build/
 *.egg-info/
+*.egg
+eggs/
+.eggs/
+wheels/
+*.spec
 
-# OS
-.DS_Store
-Thumbs.db
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
 
-# Pytest
-.pytest_cache/
-htmlcov/
-.coverage
-
-# Environment Variables
-.env
-*.env
+# --- Generated Large Data & Benchmarks ---
+data/*.npy
+data/*.npz
+data/*.json
+data_text/*.npy
+data_text/*.npz
+benchmarks/*.json
+benchmarks/*.csv
