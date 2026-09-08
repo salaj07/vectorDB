@@ -40,7 +40,15 @@ def main():
     # Initialize IndexManager and load 5,000 text vectors
     manager = IndexManager(dimension=128)
     print(f"\nLoading text statements from '{target_dir}/' into VectorStore...")
-    manager.load_data(target_dir)
+    manager.store.load(target_dir)
+    manager.build_index("brute")
+    manager.build_index("ivf")
+    manager.hnsw.ef_construction = 32
+    manager.hnsw.build(
+        manager.store.vectors,
+        manager.store.ids,
+        manager.store.active_mask,
+    )
     print(f"Loaded {manager.store.count()} text vectors (dim={manager.store.dimension}).")
 
     # Get search query from CLI arguments or default

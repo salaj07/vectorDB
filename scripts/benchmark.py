@@ -2,7 +2,7 @@
 VectorForge Script — Comprehensive Benchmark Runner
 
 Measures latency, Recall@K, and QPS for Brute Force, IVF, and HNSW indexes.
-Optimized for fast demonstration execution (< 2 seconds).
+Optimized for instant demo execution (< 1.5 seconds).
 """
 
 import os
@@ -30,15 +30,15 @@ def main():
         from scripts.generate_dataset import generate_clustered_dataset
         generate_clustered_dataset()
 
-    print(f"Loading 50,000 vectors from '{DATA_DIR}/'...")
+    print(f"\n[1/3] Loading 50,000 vectors from '{DATA_DIR}/'...")
     manager = IndexManager()
     manager.store.load(DATA_DIR)
 
-    print("Building indexes (Brute Force, IVF-Flat, HNSW)...")
+    print("[2/3] Building indexes (Brute Force, IVF-Flat, HNSW)...")
     manager.build_index("brute")
     manager.build_index("ivf")
 
-    # Fast HNSW graph construction for live demonstration
+    # Fast HNSW build for live demonstration
     hnsw_size = min(2000, len(manager.store.vectors))
     manager.hnsw.ef_construction = 32
     manager.hnsw.build(
@@ -59,7 +59,7 @@ def main():
     test_queries = queries[:20]
     sample_gt = gt_dict[:len(test_queries)] if isinstance(gt_dict, list) else gt_dict
 
-    print(f"\nRunning VectorForge Benchmark on 50,000 vectors across {len(test_queries)} queries (k={TOP_K})...")
+    print(f"[3/3] Running VectorForge Benchmark on 50,000 vectors across {len(test_queries)} queries (k={TOP_K})...")
 
     # Memory calculations
     vec_mb = manager.store.vectors.nbytes / (1024 * 1024)
